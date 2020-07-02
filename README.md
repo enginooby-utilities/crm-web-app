@@ -12,4 +12,9 @@
   - jaxb-api-2.3.0.jar
   - jaxb-core-2.3.0.jar
   - jaxb-impl-2.3.0.jar
-
+10. Configure Spring + Hibernate
+  - Define database dataSource / connection pool in Spring MVC configuaration xml file
+  - Setup Hibernate session factory
+  - Setup Hibernate transaction manager
+  - Enable configuration of transctional annotation
+  - Add support for reading web resources: css, images, js, etc.

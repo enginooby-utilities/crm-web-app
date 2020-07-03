@@ -1,4 +1,4 @@
-# Steps
+# Development Process
 
 ## Setup enviroment
 1. Create new Dynamic Web Project in Eclipse
@@ -41,13 +41,16 @@
 5. Update JSP pages
   - Add support for JSTL Core tags: <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 6. Prettify JSP page with CSS
+  - Place CSS in a 'resources' folder in WebContent.
+  - Configure Spring to serve up 'resources' folder.
+  - Reference CSS in the JSP.
 ## Notes
 - Package for scanning must match in Spring configuration xml file.
 - 'view' folder containning JSP files must match in Spring configuration xml file
 - Run project: choose project root -> run as -> run on server
 - Use @Transactional [org.springframework] to start and close transaction for a method [CustomerDAO]
 - Use @Repository with DAO implementation to handle exception translation.
-
+- ${pageContext.request.contextPath returns proper app name in JSP. 
 
 
 

@@ -38,10 +38,12 @@
     - Get result from DAO
     - Add result to the model
     - Return JSP page
-
+5. Update JSP pages
+  - Add support for JSTL Core tags: <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+6. Prettify JSP page with CSS
 ## Notes
-- Package for scanning should match in Spring configuration xml file.
-- 'view' folder containning jsp file should match in Spring configuration xml file
+- Package for scanning must match in Spring configuration xml file.
+- 'view' folder containning JSP files must match in Spring configuration xml file
 - Run project: choose project root -> run as -> run on server
 - Use @Transactional [org.springframework] to start and close transaction for a method [CustomerDAO]
 - Use @Repository with DAO implementation to handle exception translation.

@@ -10,40 +10,41 @@
 7. Include lastest Spring framework jars in WEB-INF/lib [link]
 8. Include lastest Hibernate jars (required folder) and c3p0 jars (optional folder) in WEB-INF/lib [link]
 9. For Java 9+, include following jars in WEB-INF/lib
-  - javax.activation-1.2.0.jar
-  - jaxb-api-2.3.0.jar
-  - jaxb-core-2.3.0.jar
-  - jaxb-impl-2.3.0.jar
+   - javax.activation-1.2.0.jar
+   - jaxb-api-2.3.0.jar
+   - jaxb-core-2.3.0.jar
+   - jaxb-impl-2.3.0.jar
 10. Configure Spring + Hibernate
-  - Define database dataSource / connection pool in Spring MVC configuration xml file
-  - Setup Hibernate session factory
-  - Setup Hibernate transaction manager
-  - Enable configuration of transctional annotation
-  - Add support for reading web resources: css, images, js, etc.
+   - Define database dataSource / connection pool in Spring MVC configuration xml file
+   - Setup Hibernate session factory
+   - Setup Hibernate transaction manager
+   - Enable configuration of transctional annotation
+   - Add support for reading web resources: css, images, js, etc.
 11. Test Spring controller: create a Controller class with a method return to a new JSP file in 'view' folder.
 
 ## Main
 1. Create Customer class and map to database table using Hibernate.
 2. Create CustomerDAO interface.
 3. Create CustomerDAOImpl class with @Repository
-  - Inject the session factory with @Autowired
-  - Implement methods with @Transactional
-    - Get the current Hibernate session
-    - Create a query [org.hibernate.query.Query]
-    - Execute query and get result list
-    - Return result
+   - Inject the session factory with @Autowired
+   - Implement methods with @Transactional
+     - Get the current Hibernate session
+     - Create a query [org.hibernate.query.Query]
+     - Execute query and get result list
+     - Return result
 4. Update CustomerController
-  - Inject CustomerDAO using @Autowired
-  - Create a request method with @RequestMapping
-    - Get result from DAO
-    - Add result to the model
-    - Return JSP page
+   - Inject CustomerDAO using @Autowired
+   - Create a request method with @RequestMapping
+     - Get result from DAO
+     - Add result to the model
+     - Return JSP page
 5. Update JSP pages
-  - Add support for JSTL Core tags: <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+   - Add support for JSTL Core tags: <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 6. Prettify JSP page with CSS
-  - Place CSS in a 'resources' folder in WebContent.
-  - Configure Spring to serve up 'resources' folder.
-  - Reference CSS in the JSP.
+   - Place CSS in a 'resources' folder in WebContent.
+   - Configure Spring to serve up 'resources' folder.
+   - Reference CSS in the JSP.
+
 ## Notes
 - Package for scanning must match in Spring configuration xml file.
 - 'view' folder containning JSP files must match in Spring configuration xml file

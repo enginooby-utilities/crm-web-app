@@ -25,27 +25,26 @@
 ## Main
 1. Create Customer class and map to database table using Hibernate.
 2. Create CustomerDAO interface.
-3. Create CustomerDAOImpl class with @Repository
-   - Inject the session factory with @Autowired
+3. Create CustomerDAOImpl class with **`@Repository`**
+   - Inject the session factory with **`@Autowired`**
    - Implement methods
      - Get the current Hibernate session
      - Create a query [org.hibernate.query.Query]
      - Execute query and get result list
      - Return result
 4. Create Service interface
-5. Create Service implementation with *`@Service`*
-   - Inject DAO with @Autowired.
-   - Implement methods with @Transactional
+5. Create Service implementation with **`@Service`**
+   - Inject DAO with **`@Autowired`**.
+   - Implement methods with **`@Transactional`**
    - Delegate calls to DAO.
 6. Create/Update CustomerController
-   - Inject CustomerService using @Autowired
-   - Create a request method with @RequestMapping
+   - Inject CustomerService using **`@Autowired`**
+   - Create a request method with **`@RequestMapping`**
      - Get result from Service from DAO
      - Add result to the model
      - Return JSP page
 7. Create/Update JSP pages
    - Add support for JSTL Core tags: ```<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>```
-
 
 
 
@@ -67,12 +66,12 @@
 - Use @Transactional [org.springframework] to start and close transaction for a method [CustomerDAO]
 - Use @Repository with DAO implementation to handle exception translation.
 - ```${pageContext.request.contextPath}``` returns proper app name in JSP. 
-- *`@RequestMapping`* (hanlde all method), *`@GetMapping`*, *`@PostMapping`*
+- **`@RequestMapping`** (hanlde all method), **`@GetMapping`**, **`@PostMapping`**
 - ```@RequestMapping(path="...", method=RequestMethod.GET)``` <=> ```@GetMapping(path="...")```
-- *`@Service`* applied to Service implementation.
+- **`@Service`** applied to Service implementation.
 - Controller <-> Service layer <-> DAO.
 - *Service Layer design pattern* 
-  - Define *`@Transactional`* at Service layer instead of DAO.
+  - Define **`@Transactional`** at Service layer instead of DAO.
   - Inject Service instead of DAO in the Controller.
 
 

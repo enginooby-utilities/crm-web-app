@@ -32,18 +32,24 @@
      - Create a query [org.hibernate.query.Query]
      - Execute query and get result list
      - Return result
-4. Update CustomerController
+4. Create/Update CustomerController
    - Inject CustomerDAO using @Autowired
    - Create a request method with @RequestMapping
      - Get result from DAO
      - Add result to the model
      - Return JSP page
-5. Update JSP pages
-   - Add support for JSTL Core tags: <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-6. Prettify JSP page with CSS
+5. Create/Update JSP pages
+   - Add support for JSTL Core tags: ```<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>```
+
+## Additional
+1. Prettify JSP page with CSS
    - Place CSS in a 'resources' folder in WebContent.
    - Configure Spring to serve up 'resources' folder.
    - Reference CSS in the JSP.
+2. Configure welcome files in Spring XML to redirect from home page
+   - Create a JSP inside WebContent, match with name of welcome file in XML 
+[index.jsp]
+   - Redirect to a desired address: ```<% response.sendRedirect("address"); %>```
 
 ## Notes
 - Package for scanning must match in Spring configuration xml file.
@@ -51,7 +57,7 @@
 - Run project: choose project root -> run as -> run on server
 - Use @Transactional [org.springframework] to start and close transaction for a method [CustomerDAO]
 - Use @Repository with DAO implementation to handle exception translation.
-- ${pageContext.request.contextPath returns proper app name in JSP. 
+- ```${pageContext.request.contextPath}``` returns proper app name in JSP. 
 
 
 

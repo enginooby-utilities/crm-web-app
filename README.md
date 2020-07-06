@@ -70,6 +70,8 @@
 [[CustomerDAOImpl]()]
 - **@RequestMapping** (hanlde all method), **@GetMapping**, **@PostMapping**
 - ```@RequestMapping(path="...", method=RequestMethod.GET)``` <=> ```@GetMapping(path="...")```
+- Use "redirect:mapped_method" to redirect to a given method in the Controller instead of JSP page.
+[[CustomerController]()]
 - Use @Transactional [org.springframework] to start and close transaction for a method [CustomerDAO]
 - Use @Repository with DAO implementation to handle exception translation.
 - Use **@Service** for Service implementation.

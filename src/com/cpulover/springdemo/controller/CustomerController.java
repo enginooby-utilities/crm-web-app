@@ -48,7 +48,7 @@ public class CustomerController {
 	public String saveCustomer(@ModelAttribute("customer") Customer customer) {
 		// save customer using service
 		customerService.saveCustomer(customer);
-		return "redirect:/customer/list";
+		return "redirect:/customer/list"; // redirect to /customer/list method in the controller
 	}
 
 	@GetMapping("/showFormForUpdate")
@@ -59,5 +59,11 @@ public class CustomerController {
 		model.addAttribute("customer", customer);
 		// send over to the form
 		return "customer-form";
+	}
+	
+	@GetMapping("/delete")
+	public String deleteCustomer(@RequestParam("customerId") int id) {
+		customerService.deleteCustomer(id);
+		return "redirect:/customer/list";
 	}
 }

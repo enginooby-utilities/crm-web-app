@@ -25,28 +25,27 @@
 ## Main
 1. Create Customer class and map to database table using Hibernate.
 2. Create CustomerDAO interface.
-3. Create CustomerDAOImpl class with **`@Repository`**
-   - Inject the session factory with **`@Autowired`**
+3. Create CustomerDAOImpl class with **@Repository**
+   - Inject the session factory with **@Autowired**
    - Implement methods
      - Get the current Hibernate session
      - Create a query [org.hibernate.query.Query]
      - Execute query and get result list
      - Return result
 4. Create Service interface
-5. Create Service implementation with **`@Service`**
-   - Inject DAO with **`@Autowired`**.
-   - Implement methods with **`@Transactional`**
+5. Create Service implementation with **@Service**
+   - Inject DAO with **@Autowired**.
+   - Implement methods with **@Transactional**
    - Delegate calls to DAO.
 6. Create/Update CustomerController
-   - Inject CustomerService using **`@Autowired`**
-   - Create a request method with **`@RequestMapping`**
-     - Get result from Service from DAO
-     - Add result to the model
+   - Inject CustomerService using **@Autowired**
+   - Create a request method with **@RequestMapping**
+     - Get result from Service from DAO or create model attribute to find form data 
+[[CustomerController]()]
+     - Add result/attribute to the model
      - Return JSP page
 7. Create/Update JSP pages
    - Add support for JSTL Core tags: ```<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>```
-
-
 
 ## Additional
 1. Prettify JSP page with CSS
@@ -59,21 +58,23 @@
    - Redirect to a desired address: ```<% response.sendRedirect("address"); %>```
 3. Refactor request method in the Controller.
 
+## JSP
+- Add support for Spring MVC Form Tags: ```<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>```
+- ```${pageContext.request.contextPath}``` returns proper app name in JSP. 
+
 ## Notes
 - Package for scanning must match in Spring configuration xml file.
 - 'view' folder containning JSP files must match in Spring configuration xml file
 - Run project: choose project root -> run as -> run on server
+- **@RequestMapping** (hanlde all method), **@GetMapping**, **@PostMapping**
+- ```@RequestMapping(path="...", method=RequestMethod.GET)``` <=> ```@GetMapping(path="...")```
 - Use @Transactional [org.springframework] to start and close transaction for a method [CustomerDAO]
 - Use @Repository with DAO implementation to handle exception translation.
-- ```${pageContext.request.contextPath}``` returns proper app name in JSP. 
-- **`@RequestMapping`** (hanlde all method), **`@GetMapping`**, **`@PostMapping`**
-- ```@RequestMapping(path="...", method=RequestMethod.GET)``` <=> ```@GetMapping(path="...")```
-- **`@Service`** applied to Service implementation.
-- Controller <-> Service layer <-> DAO.
+- Use **@Service** for Service implementation.
 - *Service Layer design pattern* 
-  - Define **`@Transactional`** at Service layer instead of DAO.
+  - Define **@Transactional** at Service layer instead of DAO.
   - Inject Service instead of DAO in the Controller.
-
+  - Controller <-> Service layer <-> DAO.
 
 
 

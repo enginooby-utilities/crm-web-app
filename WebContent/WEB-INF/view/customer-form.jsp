@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Add new customer</title>
+	<title>Save customer</title>
 	
 	<!--reference style sheet, pageContext.request.contextPath returns proper app name-->
 	<link type="text/css" rel="stylesheet"
@@ -22,8 +22,12 @@
 	</div>
 	
 	<div id="container">
-		<h3>Add new customer</h3>
+		<h3>Save customer</h3>
 		<form:form action="saveCustomer" modelAttribute="customer" method="POST">
+		
+			<!-- associate this data with customer id -->
+			<form:hidden path="id"/>
+			
 			<table>
 				<tbody>
 					<tr>

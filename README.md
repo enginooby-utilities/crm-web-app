@@ -66,12 +66,14 @@
 - Package for scanning must match in Spring configuration xml file.
 - 'view' folder containning JSP files must match in Spring configuration xml file
 - Run project: choose project root -> run as -> run on server
+- Use SessionFactory.saveOrUpdate(): combine save() and update().
+[[CustomerDAOImpl]()]
 - **@RequestMapping** (hanlde all method), **@GetMapping**, **@PostMapping**
 - ```@RequestMapping(path="...", method=RequestMethod.GET)``` <=> ```@GetMapping(path="...")```
 - Use @Transactional [org.springframework] to start and close transaction for a method [CustomerDAO]
 - Use @Repository with DAO implementation to handle exception translation.
 - Use **@Service** for Service implementation.
-- *Service Layer design pattern* 
+- **Service Layer design pattern**
   - Define **@Transactional** at Service layer instead of DAO.
   - Inject Service instead of DAO in the Controller.
   - Controller <-> Service layer <-> DAO.

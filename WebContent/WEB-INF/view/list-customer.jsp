@@ -27,13 +27,23 @@
 					<th>First name</th>
 					<th>Last name</th>
 					<th>Email</th>
+					<th>Action</th>
 				</tr>
+				<%-- customers is the model obtained from CustomerController --%>
 				<c:forEach var="tempCustomer" items="${customers}">
-					<%-- customers is the model obtained from CustomerController --%>
+
+					<!-- construct/define an "update" link with customer id parameter -->
+					<c:url var="updateLink" value="/customer/showFormForUpdate">
+						<c:param name="customerId" value="${tempCustomer.id}" />
+					</c:url>
 					<tr>
 						<td>${tempCustomer.firstName}</td>
 						<td>${tempCustomer.lastName}</td>
 						<td>${tempCustomer.email}</td>
+						<td>
+							<!-- display the update link -->
+							<a href="${updateLink}">Update</a>
+						</td>
 					</tr>
 				</c:forEach>
 			</table>

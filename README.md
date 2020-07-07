@@ -94,14 +94,14 @@ A simple web application to manage customer relationships, using Spring MVC and 
 ### Notes
 - Package for scanning must match in Spring configuration xml file.
 - 'view' folder containning JSP files must match in Spring configuration xml file
-- Run project: choose project root -> run as -> run on server
+- Run project: choose project root -> run as -> run on server.
 - Use SessionFactory.saveOrUpdate(): combine save() and update()
 [[CustomerDAOImpl](https://github.com/cpulover-projects/crm-web-app/blob/master/src/com/cpulover/springdemo/dao/CustomerDAOImpl.java)]
 - *__@RequestMapping__* (hanlde all method), *__@GetMapping__*, *__@PostMapping__*
 - ```@RequestMapping(path="...", method=RequestMethod.GET)``` <=> ```@GetMapping(path="...")```
 - Use "redirect:mapped_method" to redirect to a given method in the Controller instead of JSP page
 [[CustomerController](https://github.com/cpulover-projects/crm-web-app/blob/master/src/com/cpulover/springdemo/controller/CustomerController.java)]
-- Use @Transactional [org.springframework] to start and close transaction for a method 
+- Use *__@Transactional__* [org.springframework] to start and close transaction for a method 
 [[CustomerDAO](https://github.com/cpulover-projects/crm-web-app/blob/master/src/com/cpulover/springdemo/dao/CustomerDAO.java)]
 - Use @Repository with DAO implementation to handle exception translation.
 - Use *__@Service__* for Service implementation.

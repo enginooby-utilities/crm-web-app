@@ -20,24 +20,16 @@
 
 	<div id="container">
 		<div id="content">
-			<table>
-				<tr>
-				</tr>
-				<tr>
-					<td>
-						<input type="button" value="Add customer"
-						onClick="window.location.href='showFormForAdd'; return false;"
-						class="add-button" /> 
-						<!--  add a search box --> 
-						<form:form
-							action="search" method="GET">
-							<input type="text" name="theSearchName" />
-							<input type="submit" value="Search" class="add-button" />
-						</form:form>
-					</td>
-				</tr>
 
-			</table>
+			<input type="button" value="Add customer"
+				onClick="window.location.href='showFormForAdd'; return false;"
+				class="add-button" />
+			<!--  add a search box -->
+			<form:form action="search" method="GET">
+				<input type="text" name="theSearchName" />
+				<input type="submit" value="Search" class="add-button" />
+			</form:form>
+
 
 			<table>
 				<tr>
@@ -63,8 +55,7 @@
 						<td>${tempCustomer.lastName}</td>
 						<td>${tempCustomer.email}</td>
 						<td>
-							<!-- display the update link --> 
-							<a href="${updateLink}">Update</a>
+							<!-- display the update link --> <a href="${updateLink}">Update</a>
 							| <a href="${deleteLink}"
 							onClick="if(!(confirm('Are you sure to delete this customer?'))) return false">Delete</a>
 

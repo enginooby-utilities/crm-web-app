@@ -4,6 +4,7 @@ html, body{
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 }
 
+
 table {   
 	border-collapse:collapse;
 	border-bottom:1px solid gray;
@@ -24,10 +25,10 @@ tr {
 }
  
 tr:nth-child(even) {background: #FFFFFF}
-tr:nth-child(odd) {background: #BBBBBB}	
+tr:nth-child(odd) {background: #BBBBBB}		
  
-#wrapper {width: 100%; margin-top: 0px; }
-#header {width: 70%; background: #000000; margin-top: 0px; padding:15px 0px 15px 15px;}
+#wrapper {width: 100%; margin-top: 0px;}
+#header {width: 70%; background: #121111; margin-top: 0px; padding:15px 0px 15px 15px;}
 #header h2 {width: 100%; margin:auto; color: #FFFFFF;}
 #container {width: 100%; margin:auto}
 #container h3 {color: #000;}

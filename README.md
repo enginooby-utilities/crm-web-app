@@ -111,7 +111,7 @@ A simple web application to manage customer relationships, using Spring MVC and 
   - Controller <-> Service layer <-> DAO.
 
 ---
-[**Go to top**](#list-of-practiced-topics)
+[**Go to top**](#customer-relationship-management-web-application)
 
 
 

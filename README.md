@@ -1,4 +1,7 @@
 # Customer Relationship Management Web Application
+|[Features](#features)|[Languagues & Technologies](#tools)|[Enviroment setup](#setup-enviroment)|[Main process](#main)|[Additional process](#additional)|[JSP](#jsp)|[Notes](#notes)|
+|---|---|---|---|---|---|---|
+
 <p align="center"><img width="450" height="250" src="./images/list-customer2.png">       <img width="450" height="250" src="./images/save-customer2.PNG"></p>
 
 ## About
@@ -8,6 +11,9 @@ A simple web application to manage customer relationships, using Spring MVC and 
 - Add new customer
 - Update customer
 - Delete customer
+
+<a name="tools">
+   
 ### Languagues & Technologies
 - Java
 - XML
@@ -104,7 +110,8 @@ A simple web application to manage customer relationships, using Spring MVC and 
   - Inject Service instead of DAO in the Controller.
   - Controller <-> Service layer <-> DAO.
 
-
+---
+[**Go to top**](#list-of-practiced-topics)
 
 
 

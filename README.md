@@ -54,7 +54,7 @@
    - Reference CSS in the JSP.
 2. Configure welcome files in Spring XML to redirect from home page
    - Create a JSP inside WebContent, match with name of welcome file in XML 
-[index.jsp]
+[[index.jsp]()]
    - Redirect to a desired address: ```<% response.sendRedirect("address"); %>```
 3. Refactor request method in the Controller.
 
@@ -66,11 +66,11 @@
 - Package for scanning must match in Spring configuration xml file.
 - 'view' folder containning JSP files must match in Spring configuration xml file
 - Run project: choose project root -> run as -> run on server
-- Use SessionFactory.saveOrUpdate(): combine save() and update().
+- Use SessionFactory.saveOrUpdate(): combine save() and update()
 [[CustomerDAOImpl]()]
 - **@RequestMapping** (hanlde all method), **@GetMapping**, **@PostMapping**
 - ```@RequestMapping(path="...", method=RequestMethod.GET)``` <=> ```@GetMapping(path="...")```
-- Use "redirect:mapped_method" to redirect to a given method in the Controller instead of JSP page.
+- Use "redirect:mapped_method" to redirect to a given method in the Controller instead of JSP page
 [[CustomerController]()]
 - Use @Transactional [org.springframework] to start and close transaction for a method [CustomerDAO]
 - Use @Repository with DAO implementation to handle exception translation.

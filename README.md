@@ -11,13 +11,16 @@ A simple web application to manage customer relationships, using Spring MVC and 
 - Add new customer
 - Update customer
 - Delete customer
+- AOP Logging support
 
 <a name="tools">
    
 ### Languagues & Technologies
 - Java
 - XML
+- MySQL
 - Spring MVC
+- Spring AOP
 - Hibernate
 - JSTL
 - JSP

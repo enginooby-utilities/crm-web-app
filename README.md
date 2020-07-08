@@ -27,29 +27,38 @@ A simple web application to manage customer relationships, using Spring MVC and 
 
 ### Setup enviroment
 1. Create new Dynamic Web Project in Eclipse
-2. Create MySQL database in Workbench [create-database.sql]
-3. Include MySQL connector in WEB-INF/lib
-4. Test database connection (Project facets/runtimes/Tomcat): create a servlet 
-[[TestDatabaseServlet](https://github.com/cpulover-projects/crm-web-app/blob/master/src/com/cpulover/testdatabase/TestDabaseServlet.java)]
-5. Include configuaration xml files (spring mvc and web) in WEB-INF.
-6. Include JSTL API in WEB-INF/lib
-7. Include lastest Spring framework jars in WEB-INF/lib 
-[[URL](https://repo.spring.io/release/org/springframework/spring/)]
-8. Include lastest Hibernate jars (required folder) and c3p0 jars (optional folder) in WEB-INF/lib 
+2. Create MySQL database in Workbench 
+[[create-database.sql]()]
+3. Import jars to library: WEB-INF/lib
+   - MySQL connector 
 [[URL]()]
-9. For Java 9+, include following jars in WEB-INF/lib
+   - JSTL API (for JSP) 
+[[URL]()]
+   - Spring framework 
+[[URL](https://repo.spring.io/release/org/springframework/spring/)]
+   - Hibernate (required folder) and c3p0 (optional folder) 
+[[URL]()]
+   - AspectJ (for AOP) 
+[[URL](https://mvnrepository.com/artifact/org.aspectj/aspectjweaver)].
+
+4. For Java 9+, include following jars in WEB-INF/lib
    - javax.activation-1.2.0.jar
    - jaxb-api-2.3.0.jar
    - jaxb-core-2.3.0.jar
    - jaxb-impl-2.3.0.jar
-10. Configure Spring + Hibernate 
+5. Test database connection (Project facets/runtimes/Tomcat): create a servlet 
+[[TestDatabaseServlet](https://github.com/cpulover-projects/crm-web-app/blob/master/src/com/cpulover/testdatabase/TestDabaseServlet.java)]
+6. Include configuaration xml files (spring mvc and web) in WEB-INF.
+7. Configure Spring + Hibernate in xml files
 [[spring-mvc-crud-demo-servlet.xml](https://github.com/cpulover-projects/crm-web-app/blob/master/WebContent/WEB-INF/spring-mvc-crud-demo-servlet.xml)]
-    - Define database dataSource / connection pool in Spring MVC configuration xml file
+    - Define XML namespaces and schema locations
+    - Define database dataSource / connection pool
     - Setup Hibernate session factory
     - Setup Hibernate transaction manager
     - Enable configuration of transctional annotation
     - Add support for reading web resources: css, images, js, etc.
-11. Test Spring controller: create a Controller class with a method return to a new JSP file in 'view' folder.
+    - Enable AspectJ Auto Proxy
+8. Test Spring controller: create a Controller class with a method return to a new JSP file in 'view' folder.
 
 ### Main
 1. Create Customer class and map to database table using Hibernate.

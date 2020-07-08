@@ -84,6 +84,7 @@ A simple web application to manage customer relationships, using Spring MVC and 
      - Return JSP page
 7. Create/Update JSP pages
    - Add support for JSTL Core tags: ```<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>```
+8. Create Aspect class with @Aspect and @Component then add advices.
 
 ### Additional
 1. Prettify JSP page with CSS

@@ -84,7 +84,12 @@ A simple web application to manage customer relationships, using Spring MVC and 
      - Return JSP page
 7. Create/Update JSP pages
    - Add support for JSTL Core tags: ```<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>```
-8. Create Aspect class with @Aspect and @Component then add advices.
+8. Create Aspect class with *__@Aspect__* and *__@Component__* 
+[[LoggingAspect](https://github.com/cpulover-projects/crm-web-app/blob/master/src/com/cpulover/springdemo/aspect/LoggingAspect.java)] 
+[[Reference](https://github.com/cpulover-practice/spring-aop)]
+   - Add logger 
+   - Setup pointcut declarations
+   - Add advices
 
 ### Additional
 1. Prettify JSP page with CSS
@@ -95,7 +100,7 @@ A simple web application to manage customer relationships, using Spring MVC and 
    - Create a JSP inside WebContent, match with name of welcome file in XML 
 [[index.jsp](https://github.com/cpulover-projects/crm-web-app/blob/master/WebContent/index.jsp)]
    - Redirect to a desired address: ```<% response.sendRedirect("address"); %>```
-3. Refactor request method in the Controller.
+3. Refactor request method in the Controller using *__@GetMapping__*, *__@PostMapping__*
 
 ### JSP
 - Support for Spring MVC Form Tags: ```<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>```
@@ -107,13 +112,13 @@ A simple web application to manage customer relationships, using Spring MVC and 
 - Run project: choose project root -> run as -> run on server.
 - Use SessionFactory.saveOrUpdate(): combine save() and update()
 [[CustomerDAOImpl](https://github.com/cpulover-projects/crm-web-app/blob/master/src/com/cpulover/springdemo/dao/CustomerDAOImpl.java)]
-- *__@RequestMapping__* (hanlde all method), *__@GetMapping__*, *__@PostMapping__*
+- *__@RequestMapping__* (hanlde all methods), *__@GetMapping__*, *__@PostMapping__*
 - ```@RequestMapping(path="...", method=RequestMethod.GET)``` <=> ```@GetMapping(path="...")```
 - Use "redirect:mapped_method" to redirect to a given method in the Controller instead of JSP page
 [[CustomerController](https://github.com/cpulover-projects/crm-web-app/blob/master/src/com/cpulover/springdemo/controller/CustomerController.java)]
 - Use *__@Transactional__* [org.springframework] to start and close transaction for a method 
 [[CustomerDAO](https://github.com/cpulover-projects/crm-web-app/blob/master/src/com/cpulover/springdemo/dao/CustomerDAO.java)]
-- Use @Repository with DAO implementation to handle exception translation.
+- Use *__@Repository__* with DAO implementation to handle exception translation.
 - Use *__@Service__* for Service implementation.
 - **Service Layer design pattern**
   - Define *__@Transactional__* at Service layer instead of DAO.

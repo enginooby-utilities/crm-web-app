@@ -26,6 +26,8 @@ A simple web application to manage customer relationships, using Spring MVC and 
 - JSP
 - CSS/JavaScript
 
+---
+
 ## Development Process
 
 ### Setup enviroment
@@ -104,6 +106,8 @@ A simple web application to manage customer relationships, using Spring MVC and 
 [[index.jsp](https://github.com/cpulover-projects/crm-web-app/blob/master/WebContent/index.jsp)]
    - Redirect to a desired address: ```<% response.sendRedirect("address"); %>```
 3. Refactor request method in the Controller using *__@GetMapping__*, *__@PostMapping__*
+
+---
 
 ### JSP
 - Support for Spring MVC Form Tags: ```<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>```

@@ -41,11 +41,11 @@ LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
 
 INSERT INTO `customer` VALUES 
-	(1,'David','Adams','david@luv2code.com'),
-	(2,'John','Doe','john@luv2code.com'),
-	(3,'Ajay','Rao','ajay@luv2code.com'),
-	(4,'Mary','Public','mary@luv2code.com'),
-	(5,'Maxwell','Dixon','max@luv2code.com');
+	(1,'David','Adams','david@cpulover.com'),
+	(2,'John','Doe','john@cpulover.com'),
+	(3,'Ajay','Rao','ajay@cpulover.com'),
+	(4,'Mary','Public','mary@cpulover.com'),
+	(5,'Maxwell','Dixon','max@cpulover.com');
 
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
